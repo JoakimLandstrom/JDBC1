@@ -11,7 +11,7 @@ import se.jola.jdbc1.repos.MovieRepository;
 
 public final class SQLMovieRepository implements MovieRepository {
 
-	private final String url = "jdbc:mysql://localhost:3306/MovieDatabase?user=root&password=iyfo818oh&useSSL=false";
+	private final String url = "jdbc:mysql://localhost:3306/MovieDatabase?user=root&password=root&useSSL=false";
 
 	private ResultMapper<Actor> actorMapper = (a -> new Actor(a.getInt("actorId"), a.getString("firstName"), a.getString("lastName")));
 	private ResultMapper<Movie> movieMapper = (m -> new Movie(m.getInt("movieId"), m.getString("title"),
